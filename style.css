@@ -1,0 +1,323 @@
+body{
+    font-family: 'TT Lakes',sans-serif;
+    margin:0;
+    padding:0;
+    background-color: #F8F8F8;
+}
+p{white-space:pre-line;}
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-width:320px;
+    min-height:88px;
+    background-color:#FFFFFF;
+    column-gap: 20px;
+}
+.header__boxLeft{
+    display: flex;
+    margin-left:10px;
+    justify-content: start;
+    align-items: center;
+    column-gap:20px;
+    margin-right:auto;
+
+}
+.header__boxRight{
+    position: relative;
+    margin-left:auto;
+    margin-right: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    column-gap:20px;
+
+}
+.header__boxLeft_logo{
+    background-image: url(ic/Logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 51px;
+}
+.main__titleBox{
+    display: flex;
+    min-width: 320px;
+    height: 40px;
+    margin-top: 30px;
+}
+.main__titleBox_rightBox{
+    display: none;
+}
+.main__titleBox_titleName{
+    position: relative;
+    font-size: 28px;
+    display: flex;
+    width: 288px;
+    height: 40px;
+    column-gap: 10px;
+    align-self: center;
+}
+.main__titleBox_titleName::before{
+    content:"";
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    position:absolute;
+    border-radius: 20px;
+
+}
+.main__titleBox_titleName_text{
+    align-self:center;
+    padding-left:20px;
+}
+.main__slideMenu{
+    display: flex;
+    margin-top: 30px;
+    height: 40px;
+    margin-left:16px;
+    overflow-x: auto;
+}
+header button,
+.main__titleBox button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:0;
+    background-color: #FF3E79;
+    background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 0.5s;
+}
+button:active{
+    opacity: 0.5;
+    transform: scale(0.5);
+}
+.header__boxLeft_burger-button{
+    background-image: url(ic/burger.svg);
+}
+.header__boxRight_call-button{
+    background-image: url(ic/call.svg);
+}
+.header__boxRight_message-button{
+    background-image: url(ic/message.svg);
+}
+.header__boxRight_profile-button{
+    background-image: url(ic/profile.svg);
+}
+.header_boxRight_repair-button{
+    background-image: url(ic/repair.svg);
+}
+.header__boxRight::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    top:5px;
+    left:-10%;
+    border-radius: 6px;
+}
+.header_boxRight_check-button{
+    background-image: url(ic/checkstatus.svg);
+}
+
+.header__boxRight_call-button,
+.header__boxRight_message-button,
+.header__boxRight_profile-button{
+    display:none;
+}
+a{  
+    display: flex;
+    text-decoration: none;
+    color:#7E7E82;
+    white-space: nowrap;
+    align-items: center;
+    margin-right: 10px;
+    padding:10px;
+}
+a:hover{
+    text-decoration: underline;
+}
+.main__slideMenu_link-visited{
+    border:2px solid #B8FFEC;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+@media (hover: hover) {
+    button:hover{
+    transform: scale(1.2);
+}
+}
+.main__blockInf{
+    min-width: 320px;
+    min-height: 322px;
+    display: flex;
+    margin-top:10px;
+    flex-direction: column;
+}
+.main__blockInf_first{
+    justify-items: center;
+}
+.main_blockInf_first_text--padScreen{
+    display:none;
+}
+.main_blockInf_first_text--lapScreen{
+    display: none;
+}
+.main__blockInf_first_text{
+    display: flex;
+    width: 85%;
+    min-height:90px;
+    font-size: 14px;
+    align-self: center;
+}
+.main__blockInf_first_readMore-button{
+    font-family:'TT Lakes',sans-serif ;
+    position: relative;
+    font-size:16px;
+    font-weight: 500;
+    width: auto;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    margin-left:30px;
+    color:#1B1C21;
+    column-gap:5px;
+    margin-top:10px;
+    border:0;
+    background-color: #F8F8F8;
+    transition-duration: 0.5s;
+}
+.main__blockInf_first_readMore-button::before{
+    content:"";
+    background-image: url(ic/expand.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top:center;
+    left:-15px;
+}
+.main__blockInf_second_buttonReadMore_imgLogoCps{
+    margin-top:10px;
+}
+.main__blockInf_second{
+    margin-top:10px;
+}
+.main__blockInf_second_imgLogoCps{
+    width: 100%;
+    border-radius:5px;
+}
+.header__boxLeft_divider, .header__boxRight_laptopIc{
+    display: none;
+}
+@media screen and (min-width:768px){
+ p{
+    margin:0;
+}
+.header__boxRight_call-button,
+.header__boxRight_message-button,
+.header__boxRight_profile-button{
+    display:flex;
+}
+.header__boxRight::before{
+    left:56%;
+}
+.header__boxRight{
+    padding-right: 20px;
+}
+.main__titleBox_rightBox{
+    display: none;
+}
+.main_blockInf_first_text--lapScreen{
+    display: none;
+}
+.main__blockInf{
+    min-width: 720px;
+    height: 208px;
+    display: flex;
+    margin-top:30px;
+    margin-left:20px;
+    margin-right:20px;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 20px;
+}
+.main__blockInf_first_text{
+    display: none;
+}
+.main_blockInf_first_text--padScreen{
+    display: flex;
+    width: 312;
+    height: 160px;
+    font-size: 14px;
+}
+.main__blockInf_first_readMore-button{
+    width: auto;
+    align-items:center;
+    margin:0;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.main__blockInf_second_imgLogoCps{
+    margin-top:0;
+}
+.main__blockInf_second{
+    margin:0;
+    min-width:360px;
+}
+}
+@media screen and (min-width:1120px) {
+    header{
+        display: none;
+    }
+    .main_blockInf_first_text--padScreen{
+        display:none
+    }
+    .main__titleBox_rightBox{
+        display: flex;
+        margin-left:auto;
+        margin-right: 30px;
+        min-width: auto;
+        column-gap: 20px;
+    }
+    .main__titleBox_titleName_text{
+        display: flex;
+        margin-left:5px;
+    }
+
+    .main__slideMenu{
+        display: flex;
+        flex-wrap: wrap;
+        height:auto;
+        overflow: none;
+    }
+    .main_blockInf_first_text--lapScreen{
+        display: flex;
+        font-size: 14px;
+        min-width:490px;
+        height: auto;
+    }
+    .main__blockInf_second{
+        min-width: 40%;
+        height: 307px;
+    }
+    .header_boxRight_button--label{
+        display: flex;
+        white-space: nowrap;
+        align-self: center;
+    }
+    button:active{
+        transform: scale(0.5);
+    }
+}
+@media screen and (min-width:1121px){
+    body{
+        width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
